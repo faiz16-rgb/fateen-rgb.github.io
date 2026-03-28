@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Floating Hearts */
+.hearts span {
+  position: fixed;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 10s linear infinite;
+  opacity: 0.8;
+}
+
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 20%; animation-delay: 2s; }
+.hearts span:nth-child(3) { left: 30%; animation-delay: 4s; }
+.hearts span:nth-child(4) { left: 40%; animation-delay: 1s; }
+.hearts span:nth-child(5) { left: 50%; animation-delay: 3s; }
+.hearts span:nth-child(6) { left: 60%; animation-delay: 5s; }
+.hearts span:nth-child(7) { left: 70%; animation-delay: 2s; }
+.hearts span:nth-child(8) { left: 80%; animation-delay: 4s; }
+.hearts span:nth-child(9) { left: 90%; animation-delay: 6s; }
+.hearts span:nth-child(10){ left: 95%; animation-delay: 1s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Container */
+.container {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeInPage 1.5s ease;
+}
+
+@keyframes fadeInPage {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Title */
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 52px;
+  color: #ff4d88;
+  animation: floatTitle 3s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Message */
+.love-text {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 30px auto;
+  color: #444;
+  min-height: 140px;
+}
+
+/* Buttons */
+.surprise-btn {
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(255,77,136,0.4);
+  margin-top: 20px;
+}
+
+.surprise-btn:hover {
+  background: #e63b73;
+  transform: scale(1.08);
+}
+
+.surprise-btn.extra {
+  background: #ffb6c1;
+}
+
+/* Section */
+.section-title {
+  margin-top: 60px;
+  font-size: 28px;
+  color: #ff4d88;
+}
+
+/* Gallery */
+.gallery {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 20px;
+  animation: fade 1.2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Spotify */
+.spotify-box {
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+/* Appreciation Card */
+.thankyou-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff1f7;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  font-size: 18px;
+  color: #ff4d88;
+  opacity: 0;
+  animation: cardFadeIn 2s forwards;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Footer */
+.footer {
+  margin-top: 70px;
+  color: #777;
+  font-size: 14px;
+}
